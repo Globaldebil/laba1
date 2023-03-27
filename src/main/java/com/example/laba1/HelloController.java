@@ -12,8 +12,6 @@ public class HelloController {
     private Label mainText;
     private Button eight;
     @FXML
-    protected void onHelloButtonClick() {
-        main.append(8);
-        mainText.setText(main.toString());
-    }
+    private Button proiz;
+
 }
