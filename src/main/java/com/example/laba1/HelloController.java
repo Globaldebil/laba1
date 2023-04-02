@@ -2,7 +2,7 @@ package com.example.laba1;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
-
+import com.example.laba1.RPNConverter;
 import java.io.IOException;
 
 public class HelloController {
@@ -12,7 +12,10 @@ public class HelloController {
     private Label str, num;
     @FXML
     public void eq_click() throws IOException{
-
+        sub.append(num.getText());
+        str.setText(sub.toString());
+        String s = RPNConverter.convertToRPN(sub.toString());
+        sub.append(" =");
     }
     @FXML
     public void signClick(){
@@ -115,6 +118,10 @@ public class HelloController {
     }
     @FXML
     public void sqrtClick(){
+        sub.append("sqrt(");
+        sub.append(num.getText());
+        sub.append(") ");
+        str.setText(sub.toString());
         param.sqr(num);
     }
     @FXML
@@ -123,7 +130,7 @@ public class HelloController {
     }
     @FXML
     public void powClick(){
-        sub.append("sqrt(");
+        sub.append("sqr(");
         sub.append(num.getText());
         sub.append(") ");
         str.setText(sub.toString());
@@ -131,6 +138,10 @@ public class HelloController {
     }
     @FXML
     public void invClick(){
+        sub.append("1/(");
+        sub.append(num.getText());
+        sub.append(") ");
+        str.setText(sub.toString());
         param.inverse(num);
     }
     @FXML

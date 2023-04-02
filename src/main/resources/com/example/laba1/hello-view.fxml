@@ -57,7 +57,7 @@
                 <Font size="20.0" />
             </font>
         </Button>
-        <Button fx:id="proiz" mnemonicParsing="false" onAction="#proizClick" prefHeight="44.0" prefWidth="83.0" style="-fx-border-color: #CACACA; -fx-background-color: #F9F9F9; -fx-border-radius: 5px;" text="Умножение" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+        <Button fx:id="proiz" mnemonicParsing="false" onAction="#proizClick" prefHeight="88.0" prefWidth="123.0" style="-fx-border-color: #CACACA; -fx-background-color: #F9F9F9; -fx-border-radius: 5px;" text="Умножение" GridPane.columnIndex="3" GridPane.rowIndex="2" />
         <Button fx:id="Four" mnemonicParsing="false" onAction="#fourClick" prefHeight="44.0" prefWidth="83.0" style="-fx-border-color: #CACACA; -fx-background-color: #FFFFFF; -fx-border-radius: 5px;" text="4" GridPane.columnIndex="0" GridPane.rowIndex="3">
             <font>
                 <Font size="20.0" />

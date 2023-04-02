@@ -16,7 +16,7 @@ public class HelloApplication extends Application {
         Scene scene = new Scene(fxmlLoader.load(), 330, 502);
         //------Вызываем сцену--------
         stage.setResizable(false);
-        stage.setTitle("Калькулятор by Yurii");
+        stage.setTitle("Калькулятор by Yurii Doribidontov Ktbo2-9");
         stage.setScene(scene);
         stage.show();
     }
