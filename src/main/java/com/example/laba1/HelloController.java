@@ -2,8 +2,6 @@ package com.example.laba1;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
-import com.example.laba1.RPNConverter;
-import java.io.IOException;
 
 public class HelloController {
     StringBuilder main = new StringBuilder();
@@ -11,7 +9,7 @@ public class HelloController {
     @FXML
     private Label str, num;
     @FXML
-    public void eq_click() throws IOException{
+    public void eq_click(){
         sub.append(num.getText());
         str.setText(sub.toString());
         String s = RPNConverter.convertToRPN(sub.toString());
