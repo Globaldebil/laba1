@@ -114,7 +114,7 @@
             </font>
         </Button>
     </GridPane>
-    <Label fx:id="num" alignment="CENTER_RIGHT" layoutX="4.0" layoutY="90.0" prefHeight="70.0" prefWidth="323.0" text="0" textAlignment="RIGHT" AnchorPane.bottomAnchor="342.0" AnchorPane.leftAnchor="4.0" AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="90.0">
+    <Label fx:id="num" alignment="TOP_RIGHT" layoutX="4.0" layoutY="90.0" prefHeight="70.0" prefWidth="323.0" text="0" textAlignment="RIGHT" AnchorPane.bottomAnchor="342.0" AnchorPane.leftAnchor="4.0" AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="90.0">
         <font>
           <Font name="Segoe UI Semibold" size="48.0" />
         </font>

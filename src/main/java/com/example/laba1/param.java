@@ -5,7 +5,10 @@ import javafx.scene.control.Label;
 public class param {
     public static void sqr(Label num){
         int n = Integer.parseInt(num.getText());
-        num.setText(String.valueOf(Math.sqrt(n)).replace('.',','));
+        if(n>=0)
+            num.setText(String.valueOf(Math.sqrt(n)).replace('.',','));
+        else
+            num.setText("Неверный ввод");
     }
     public static void power(Label num){
         int n = Integer.parseInt(num.getText());

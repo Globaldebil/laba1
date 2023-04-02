@@ -42,4 +42,5 @@ public class RPNConverter {
             default -> 0;
         };
     }
+
 }
