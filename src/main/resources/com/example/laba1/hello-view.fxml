@@ -97,7 +97,7 @@
                 <Font size="20.0" />
             </font>
         </Button>
-        <Button mnemonicParsing="false" prefHeight="44.0" prefWidth="83.0" style="-fx-border-color: #CACACA; -fx-background-color: #FFFFFF; -fx-border-radius: 5px;" text="Смена знака" GridPane.columnIndex="0" GridPane.rowIndex="5" />
+        <Button mnemonicParsing="false" onAction="#signClick" prefHeight="44.0" prefWidth="83.0" style="-fx-border-color: #CACACA; -fx-background-color: #FFFFFF; -fx-border-radius: 5px;" text="Смена знака" GridPane.columnIndex="0" GridPane.rowIndex="5" />
         <Button fx:id="Zero" mnemonicParsing="false" onAction="#zeroClick" prefHeight="44.0" prefWidth="83.0" style="-fx-border-color: #CACACA; -fx-background-color: #FFFFFF; -fx-border-radius: 5px;" text="0" GridPane.columnIndex="1" GridPane.rowIndex="5">
             <font>
                 <Font size="20.0" />

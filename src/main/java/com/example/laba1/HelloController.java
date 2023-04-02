@@ -15,6 +15,14 @@ public class HelloController {
 
     }
     @FXML
+    public void signClick(){
+        int n = Integer.parseInt(main.toString());
+        n *= -1;
+        main.setLength(0);
+        main.append(n);
+        num.setText(main.toString());
+    }
+    @FXML
     public void oneClick(){
         main.append("1");
         num.setText(main.toString());
