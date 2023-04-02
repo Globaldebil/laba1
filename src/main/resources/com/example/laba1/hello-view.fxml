@@ -24,91 +24,91 @@
         <opaqueInsets>
             <Insets />
         </opaqueInsets>
-        <Button fx:id="Percent" mnemonicParsing="false" onAction="#perClick" prefHeight="44.0" prefWidth="83.0" style="-fx-border-color: #CACACA; -fx-background-color: #F9F9F9; -fx-border-radius: 5px;" text="\%" GridPane.columnIndex="0" GridPane.rowIndex="0">
+        <Button mnemonicParsing="false" onAction="#perClick" prefHeight="44.0" prefWidth="83.0" style="-fx-border-color: #CACACA; -fx-background-color: #F9F9F9; -fx-border-radius: 5px;" text="\%" GridPane.columnIndex="0" GridPane.rowIndex="0">
          <font>
             <Font size="20.0" />
          </font></Button>
-        <Button fx:id="CEntry" mnemonicParsing="false" prefHeight="44.0" prefWidth="83.0" style="-fx-border-color: #CACACA; -fx-background-color: #F9F9F9; -fx-border-radius: 5px;" text="CE" GridPane.columnIndex="1" GridPane.rowIndex="0">
+        <Button mnemonicParsing="false" prefHeight="44.0" prefWidth="83.0" style="-fx-border-color: #CACACA; -fx-background-color: #F9F9F9; -fx-border-radius: 5px;" text="CE" GridPane.columnIndex="1" GridPane.rowIndex="0">
             <font>
                 <Font size="20.0" />
             </font>
         </Button>
-        <Button fx:id="Delete" mnemonicParsing="false" onAction="#delClick" prefHeight="44.0" prefWidth="83.0" style="-fx-border-color: #CACACA; -fx-background-color: #F9F9F9; -fx-border-radius: 5px;" text="Удаление" GridPane.columnIndex="3" GridPane.rowIndex="0" />
-        <Button fx:id="Clear" mnemonicParsing="false" onAction="#clearClick" prefHeight="44.0" prefWidth="83.0" style="-fx-border-color: #CACACA; -fx-background-color: #F9F9F9; -fx-border-radius: 5px;" text="C" GridPane.columnIndex="2" GridPane.rowIndex="0">
+        <Button mnemonicParsing="false" onAction="#delClick" prefHeight="44.0" prefWidth="83.0" style="-fx-border-color: #CACACA; -fx-background-color: #F9F9F9; -fx-border-radius: 5px;" text="Удаление" GridPane.columnIndex="3" GridPane.rowIndex="0" />
+        <Button mnemonicParsing="false" onAction="#clearClick" prefHeight="44.0" prefWidth="83.0" style="-fx-border-color: #CACACA; -fx-background-color: #F9F9F9; -fx-border-radius: 5px;" text="C" GridPane.columnIndex="2" GridPane.rowIndex="0">
          <font>
             <Font size="20.0" />
          </font></Button>
         <Button mnemonicParsing="false" onAction="#invClick" prefHeight="44.0" prefWidth="83.0" style="-fx-border-color: #CACACA; -fx-background-color: #F9F9F9; -fx-border-radius: 5px;" text="1/x" GridPane.columnIndex="0" GridPane.rowIndex="1" />
         <Button mnemonicParsing="false" onAction="#powClick" prefHeight="44.0" prefWidth="83.0" style="-fx-border-color: #CACACA; -fx-background-color: #F9F9F9; -fx-border-radius: 5px; -fx-graphic: url(images/square.png);" text="Квадрат" GridPane.columnIndex="1" GridPane.rowIndex="1" />
         <Button mnemonicParsing="false" onAction="#sqrtClick" prefHeight="44.0" prefWidth="83.0" style="-fx-border-color: #CACACA; -fx-background-color: #F9F9F9; -fx-border-radius: 5px;" text="Корень" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-        <Button fx:id="division" mnemonicParsing="false" onAction="#divClick" prefHeight="44.0" prefWidth="83.0" style="-fx-border-color: #CACACA; -fx-background-color: #F9F9F9; -fx-border-radius: 5px;" text="Деление" GridPane.columnIndex="3" GridPane.rowIndex="1" />
-        <Button fx:id="Seven" mnemonicParsing="false" onAction="#sevenClick" prefHeight="44.0" prefWidth="83.0" style="-fx-border-color: #CACACA; -fx-background-color: #FFFFFF; -fx-border-radius: 5px;" text="7" GridPane.columnIndex="0" GridPane.rowIndex="2">
+        <Button mnemonicParsing="false" onAction="#divClick" prefHeight="44.0" prefWidth="83.0" style="-fx-border-color: #CACACA; -fx-background-color: #F9F9F9; -fx-border-radius: 5px;" text="Деление" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+        <Button mnemonicParsing="false" onAction="#sevenClick" prefHeight="44.0" prefWidth="83.0" style="-fx-border-color: #CACACA; -fx-background-color: #FFFFFF; -fx-border-radius: 5px;" text="7" GridPane.columnIndex="0" GridPane.rowIndex="2">
             <font>
                 <Font size="20.0" />
             </font>
         </Button>
-        <Button fx:id="Eight" mnemonicParsing="false" onAction="#eightClick" prefHeight="44.0" prefWidth="83.0" style="-fx-border-color: #CACACA; -fx-background-color: #FFFFFF; -fx-border-radius: 5px;" text="8" GridPane.columnIndex="1" GridPane.rowIndex="2">
+        <Button mnemonicParsing="false" onAction="#eightClick" prefHeight="44.0" prefWidth="83.0" style="-fx-border-color: #CACACA; -fx-background-color: #FFFFFF; -fx-border-radius: 5px;" text="8" GridPane.columnIndex="1" GridPane.rowIndex="2">
             <font>
                 <Font size="20.0" />
             </font>
         </Button>
-        <Button fx:id="Nine" mnemonicParsing="false" onAction="#nineClick" prefHeight="44.0" prefWidth="83.0" style="-fx-border-color: #CACACA; -fx-background-color: #FFFFFF; -fx-border-radius: 5px;" text="9" GridPane.columnIndex="2" GridPane.rowIndex="2">
+        <Button mnemonicParsing="false" onAction="#nineClick" prefHeight="44.0" prefWidth="83.0" style="-fx-border-color: #CACACA; -fx-background-color: #FFFFFF; -fx-border-radius: 5px;" text="9" GridPane.columnIndex="2" GridPane.rowIndex="2">
             <font>
                 <Font size="20.0" />
             </font>
         </Button>
-        <Button fx:id="proiz" mnemonicParsing="false" onAction="#proizClick" prefHeight="88.0" prefWidth="123.0" style="-fx-border-color: #CACACA; -fx-background-color: #F9F9F9; -fx-border-radius: 5px;" text="Умножение" GridPane.columnIndex="3" GridPane.rowIndex="2" />
-        <Button fx:id="Four" mnemonicParsing="false" onAction="#fourClick" prefHeight="44.0" prefWidth="83.0" style="-fx-border-color: #CACACA; -fx-background-color: #FFFFFF; -fx-border-radius: 5px;" text="4" GridPane.columnIndex="0" GridPane.rowIndex="3">
+        <Button mnemonicParsing="false" onAction="#proizClick" prefHeight="88.0" prefWidth="123.0" style="-fx-border-color: #CACACA; -fx-background-color: #F9F9F9; -fx-border-radius: 5px;" text="Умножение" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+        <Button mnemonicParsing="false" onAction="#fourClick" prefHeight="44.0" prefWidth="83.0" style="-fx-border-color: #CACACA; -fx-background-color: #FFFFFF; -fx-border-radius: 5px;" text="4" GridPane.columnIndex="0" GridPane.rowIndex="3">
             <font>
                 <Font size="20.0" />
             </font>
         </Button>
-        <Button fx:id="Five" mnemonicParsing="false" onAction="#fiveClick" prefHeight="44.0" prefWidth="83.0" style="-fx-border-color: #CACACA; -fx-background-color: #FFFFFF; -fx-border-radius: 5px;" text="5" GridPane.columnIndex="1" GridPane.rowIndex="3">
+        <Button mnemonicParsing="false" onAction="#fiveClick" prefHeight="44.0" prefWidth="83.0" style="-fx-border-color: #CACACA; -fx-background-color: #FFFFFF; -fx-border-radius: 5px;" text="5" GridPane.columnIndex="1" GridPane.rowIndex="3">
             <font>
                 <Font size="20.0" />
             </font>
         </Button>
-        <Button fx:id="Six" mnemonicParsing="false" onAction="#sixClick" prefHeight="44.0" prefWidth="83.0" style="-fx-border-color: #CACACA; -fx-background-color: #FFFFFF; -fx-border-radius: 5px;" text="6" GridPane.columnIndex="2" GridPane.rowIndex="3">
+        <Button mnemonicParsing="false" onAction="#sixClick" prefHeight="44.0" prefWidth="83.0" style="-fx-border-color: #CACACA; -fx-background-color: #FFFFFF; -fx-border-radius: 5px;" text="6" GridPane.columnIndex="2" GridPane.rowIndex="3">
             <font>
                 <Font size="20.0" />
             </font>
         </Button>
-        <Button fx:id="minus" mnemonicParsing="false" onAction="#minusClick" prefHeight="44.0" prefWidth="83.0" style="-fx-border-color: #CACACA; -fx-background-color: #F9F9F9; -fx-border-radius: 5px;" text="-" GridPane.columnIndex="3" GridPane.rowIndex="3">
+        <Button mnemonicParsing="false" onAction="#minusClick" prefHeight="44.0" prefWidth="83.0" style="-fx-border-color: #CACACA; -fx-background-color: #F9F9F9; -fx-border-radius: 5px;" text="-" GridPane.columnIndex="3" GridPane.rowIndex="3">
          <font>
             <Font size="20.0" />
          </font></Button>
-        <Button fx:id="One" mnemonicParsing="false" onAction="#oneClick" prefHeight="44.0" prefWidth="83.0" style="-fx-border-color: #CACACA; -fx-background-color: #FFFFFF; -fx-border-radius: 5px;" text="1" GridPane.columnIndex="0" GridPane.rowIndex="4">
+        <Button mnemonicParsing="false" onAction="#oneClick" prefHeight="44.0" prefWidth="83.0" style="-fx-border-color: #CACACA; -fx-background-color: #FFFFFF; -fx-border-radius: 5px;" text="1" GridPane.columnIndex="0" GridPane.rowIndex="4">
             <font>
                 <Font size="20.0" />
             </font>
         </Button>
-        <Button fx:id="Two" mnemonicParsing="false" onAction="#twoClick" prefHeight="44.0" prefWidth="83.0" style="-fx-border-color: #CACACA; -fx-background-color: #FFFFFF; -fx-border-radius: 5px;" text="2" GridPane.columnIndex="1" GridPane.rowIndex="4">
+        <Button mnemonicParsing="false" onAction="#twoClick" prefHeight="44.0" prefWidth="83.0" style="-fx-border-color: #CACACA; -fx-background-color: #FFFFFF; -fx-border-radius: 5px;" text="2" GridPane.columnIndex="1" GridPane.rowIndex="4">
             <font>
                 <Font size="20.0" />
             </font>
         </Button>
-        <Button fx:id="Three" mnemonicParsing="false" onAction="#threeClick" prefHeight="44.0" prefWidth="83.0" style="-fx-border-color: #CACACA; -fx-background-color: #FFFFFF; -fx-border-radius: 5px;" text="3" GridPane.columnIndex="2" GridPane.rowIndex="4">
+        <Button mnemonicParsing="false" onAction="#threeClick" prefHeight="44.0" prefWidth="83.0" style="-fx-border-color: #CACACA; -fx-background-color: #FFFFFF; -fx-border-radius: 5px;" text="3" GridPane.columnIndex="2" GridPane.rowIndex="4">
             <font>
                 <Font size="20.0" />
             </font>
         </Button>
-        <Button fx:id="plus" mnemonicParsing="false" onAction="#plusClick" prefHeight="44.0" prefWidth="83.0" style="-fx-border-color: #CACACA; -fx-background-color: #F9F9F9; -fx-border-radius: 5px;" text="+" GridPane.columnIndex="3" GridPane.rowIndex="4">
+        <Button mnemonicParsing="false" onAction="#plusClick" prefHeight="44.0" prefWidth="83.0" style="-fx-border-color: #CACACA; -fx-background-color: #F9F9F9; -fx-border-radius: 5px;" text="+" GridPane.columnIndex="3" GridPane.rowIndex="4">
             <font>
                 <Font size="20.0" />
             </font>
         </Button>
         <Button mnemonicParsing="false" onAction="#signClick" prefHeight="44.0" prefWidth="83.0" style="-fx-border-color: #CACACA; -fx-background-color: #FFFFFF; -fx-border-radius: 5px;" text="Смена знака" GridPane.columnIndex="0" GridPane.rowIndex="5" />
-        <Button fx:id="Zero" mnemonicParsing="false" onAction="#zeroClick" prefHeight="44.0" prefWidth="83.0" style="-fx-border-color: #CACACA; -fx-background-color: #FFFFFF; -fx-border-radius: 5px;" text="0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+        <Button mnemonicParsing="false" onAction="#zeroClick" prefHeight="44.0" prefWidth="83.0" style="-fx-border-color: #CACACA; -fx-background-color: #FFFFFF; -fx-border-radius: 5px;" text="0" GridPane.columnIndex="1" GridPane.rowIndex="5">
             <font>
                 <Font size="20.0" />
             </font>
         </Button>
-        <Button fx:id="Dot" mnemonicParsing="false" onAction="#dotClick" prefHeight="44.0" prefWidth="83.0" style="-fx-border-color: #CACACA; -fx-background-color: #FFFFFF; -fx-border-radius: 5px;" text="," GridPane.columnIndex="2" GridPane.rowIndex="5">
+        <Button mnemonicParsing="false" onAction="#dotClick" prefHeight="44.0" prefWidth="83.0" style="-fx-border-color: #CACACA; -fx-background-color: #FFFFFF; -fx-border-radius: 5px;" text="," GridPane.columnIndex="2" GridPane.rowIndex="5">
             <font>
                 <Font size="20.0" />
             </font>
         </Button>
-        <Button fx:id="Equal" mnemonicParsing="false" onAction="#eq_click" prefHeight="44.0" prefWidth="83.0" style="-fx-background-color: #005A9E; -fx-border-radius: 5;" text="=" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="5">
+        <Button mnemonicParsing="false" onAction="#eq_click" prefHeight="44.0" prefWidth="83.0" style="-fx-background-color: #005A9E; -fx-border-radius: 5;" text="=" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="5">
             <font>
                 <Font size="20.0" />
             </font>
@@ -138,7 +138,7 @@
          <Button mnemonicParsing="false" prefHeight="34.0" prefWidth="66.0" style="-fx-background-color: #F3F3F3;" text="M+" GridPane.columnIndex="2" />
          <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="82.0" style="-fx-background-color: #F3F3F3;" text="M-" GridPane.columnIndex="3" />
          <Button mnemonicParsing="false" prefHeight="46.0" prefWidth="91.0" style="-fx-background-color: #F3F3F3;" text="MS" GridPane.columnIndex="4" />
-         <Button fx:id="MemoryCheck" mnemonicParsing="false" prefHeight="79.0" prefWidth="94.0" style="-fx-background-color: #F3F3F3;" text="M" GridPane.columnIndex="5" />
+         <Button mnemonicParsing="false" prefHeight="79.0" prefWidth="94.0" style="-fx-background-color: #F3F3F3;" text="M" GridPane.columnIndex="5" />
       </children>
    </GridPane>
    <Label fx:id="str" alignment="TOP_RIGHT" layoutX="93.0" layoutY="56.0" prefHeight="27.0" prefWidth="234.0" textAlignment="RIGHT" textFill="#616161" AnchorPane.leftAnchor="4.0" AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="55.0">
