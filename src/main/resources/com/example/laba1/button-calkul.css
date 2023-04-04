@@ -1,5 +1,77 @@
-#button_num{
-    -fx-background-color: #F9F9F9;
-    -fx-border-color:  #CACACA;
+.button_num{
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #CACACA;
     -fx-border-radius: 5px;
+}
+
+.button_num:hover{
+    -fx-background-color: #FCFCFC;
+    -fx-border-color: #CACACA;
+    -fx-border-radius: 5px;
+}
+
+.button_num:pressed{
+    -fx-background-color: #F9F9F9;
+    -fx-border-color: #CACACA;
+    -fx-border-radius: 5px;
+}
+
+.button_param{
+    -fx-background-color: #F9F9F9;
+    -fx-border-color: #CACACA;
+    -fx-border-radius: 5px;
+}
+
+.button_param:hover{
+    -fx-background-color: #F6F6F6;
+    -fx-border-color: #CACACA;
+    -fx-border-radius: 5px;
+}
+
+.button_param:pressed{
+    -fx-background-color: #F4F4F4;
+    -fx-border-color: #CACACA;
+    -fx-border-radius: 5px;
+}
+
+.button_equal{
+    -fx-background-color: #005A9E;
+    -fx-border-radius: 5px;
+}
+
+.button_equal:hover{
+    -fx-background-color: #196AA7;
+    -fx-border-radius: 5px;
+}
+
+.button_equal:pressed{
+    -fx-background-color: #3179AF;
+    -fx-border-radius: 5px;
+}
+.background{
+    -fx-background-color: #F3F3F3;
+}
+
+.proiz{
+    -fx-graphic: url("../images/proiz.png");
+}
+
+.del{
+    -fx-graphic: url("../images/del.png");
+}
+
+.ddel{
+    -fx-graphic: url("../images/backspace.png");
+}
+
+.sqrt{
+    -fx-graphic: url("../images/sqrt.png");
+}
+
+.square{
+    -fx-graphic: url("../images/square.png");
+}
+
+.plus-munus{
+    -fx-graphic: url("../images/plusminus.png");
 }

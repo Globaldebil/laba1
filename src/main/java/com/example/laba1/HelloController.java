@@ -16,6 +16,8 @@ public class HelloController {
     boolean eq = false;
     @FXML
     private Label str, num;
+
+    //--------Равно------------
     @FXML
     public void eq_click(){
         sub.append(num.getText());
@@ -28,14 +30,20 @@ public class HelloController {
         str.setText(sub.toString());
         eq = true;
     }
+
+    //--------Смена знака------------
     @FXML
     public void signClick(){
-        int n = Integer.parseInt(main.toString());
+        int n;
+        if(main.length() == 0)n = 0;
+        else n = Integer.parseInt(main.toString());
         n *= -1;
         main.setLength(0);
         main.append(n);
         num.setText(main.toString());
     }
+
+    //--------Напечатать 1------------
     @FXML
     public void oneClick(){
         if(eq) {
@@ -45,6 +53,9 @@ public class HelloController {
         main.append("1");
         num.setText(main.toString());
     }
+
+
+    //--------Напечатать 2------------
     @FXML
     public void twoClick(){
         if(eq){
@@ -54,6 +65,8 @@ public class HelloController {
         main.append("2");
         num.setText(main.toString());
     }
+
+    //--------Напечатать 3------------
     @FXML
     public void threeClick(){
         if(eq){
@@ -63,6 +76,8 @@ public class HelloController {
         main.append("3");
         num.setText(main.toString());
     }
+
+    //--------Напечатать 4------------
     @FXML
     public void fourClick(){
         if(eq){
@@ -72,6 +87,8 @@ public class HelloController {
         main.append("4");
         num.setText(main.toString());
     }
+
+    //--------Напечатать 5------------
     @FXML
     public void fiveClick(){
         if(eq){
@@ -81,6 +98,8 @@ public class HelloController {
         main.append("5");
         num.setText(main.toString());
     }
+
+    //--------Напечатать 6------------
     @FXML
     public void sixClick(){
         if(eq){
@@ -90,6 +109,8 @@ public class HelloController {
         main.append("6");
         num.setText(main.toString());
     }
+
+    //--------Напечатать 7------------
     @FXML
     public void sevenClick(){
         if(eq){
@@ -99,6 +120,8 @@ public class HelloController {
         main.append("7");
         num.setText(main.toString());
     }
+
+    //--------Напечатать 8------------
     @FXML
     public void eightClick(){
         if(eq){
@@ -108,6 +131,8 @@ public class HelloController {
         main.append("8");
         num.setText(main.toString());
     }
+
+    //--------Напечатать 9------------
     @FXML
     public void nineClick(){
         if(eq){
@@ -117,6 +142,8 @@ public class HelloController {
         main.append("9");
         num.setText(main.toString());
     }
+
+    //--------Напечатать 0------------
     @FXML
     public void zeroClick(){
         if(eq){
@@ -126,6 +153,8 @@ public class HelloController {
         main.append("0");
         num.setText(main.toString());
     }
+
+    //--------Напечатать запятую------------
     @FXML
     public void dotClick(){
         if(main.length()!=0)
@@ -134,6 +163,8 @@ public class HelloController {
             main.append("0,");
         num.setText(main.toString());
     }
+
+    //--------Напечатать плюс------------
     @FXML
     public void plusClick(){
         if(eq)equalClicked();
@@ -142,6 +173,8 @@ public class HelloController {
         main.setLength(0);
         str.setText(sub.toString());
     }
+
+    //--------Напечатать минус------------
     @FXML
     public void minusClick(){
         if(eq)equalClicked();
@@ -150,6 +183,8 @@ public class HelloController {
         main.setLength(0);
         str.setText(sub.toString());
     }
+
+    //--------Напечатать умножение------------
     @FXML
     public void proizClick(){
         if(eq)equalClicked();
@@ -158,6 +193,8 @@ public class HelloController {
         main.setLength(0);
         str.setText(sub.toString());
     }
+
+    //--------Напечатать деление------------
     @FXML
     public void divClick(){
         if(eq)equalClicked();
@@ -167,6 +204,7 @@ public class HelloController {
         str.setText(sub.toString());
     }
 
+    //--------Напечатать отчистить------------
     @FXML
     public void clearClick(){
         sub.setLength(0);
@@ -174,6 +212,8 @@ public class HelloController {
         str.setText("");
         num.setText("0");
     }
+
+    //--------Вычислить корень числа------------
     @FXML
     public void sqrtClick(){
         if(eq)equalClicked();
@@ -182,6 +222,8 @@ public class HelloController {
         main.setLength(0);
         main.append(num.getText());
     }
+
+    //--------Вычислить проценты------------
     @FXML
     public void perClick(){
         if(eq)equalClicked();
@@ -189,6 +231,8 @@ public class HelloController {
         main.setLength(0);
         main.append(num.getText());
     }
+
+    //--------Вычислить квадрат числа------------
     @FXML
     public void powClick(){
         if(eq)equalClicked();
@@ -197,6 +241,8 @@ public class HelloController {
         main.setLength(0);
         main.append(num.getText());
     }
+
+    //--------Найти обратное число------------
     @FXML
     public void invClick(){
         if(eq)equalClicked();
@@ -205,6 +251,8 @@ public class HelloController {
         main.setLength(0);
         main.append(num.getText());
     }
+
+    //--------Удалить один символ------------
     @FXML
     public void delClick(){
         if(eq){
