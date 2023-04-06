@@ -35,6 +35,7 @@ public class Memory {
             ArrayToFile(list);
         } catch (IOException e){
             e.printStackTrace();
+
         }
     }
     public static boolean isEmpty() throws FileNotFoundException {
