@@ -75,3 +75,19 @@
 .plus-munus{
     -fx-graphic: url("../images/plusminus.png");
 }
+
+.but-memory{
+    -fx-background-color:  #F3F3F3;
+    -fx-text-fill: #000000;
+}
+.but-memory:hover{
+    -fx-background-color: #EAEAEA;
+    -fx-text-fill: #000000;
+}
+.but-memory:disabled{
+    -fx-text-fill: #ADADAD;
+}
+.but-memory:pressed{
+    -fx-background-color: #EDEDED;
+    -fx-text-fill: #ADADAD;;
+}

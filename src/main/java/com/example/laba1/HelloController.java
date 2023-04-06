@@ -1,7 +1,10 @@
 package com.example.laba1;
 
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+
+import java.io.FileNotFoundException;
 
 public class HelloController {
     StringBuilder main = new StringBuilder();
@@ -14,12 +17,15 @@ public class HelloController {
         eq = false;
     }
     boolean eq = false;
+
+    @FXML
+    public Button memClear;
     @FXML
     private Label str, num;
 
     //--------Равно------------
     @FXML
-    public void eq_click(){
+    public void eq_click() throws FileNotFoundException {
         sub.append(num.getText());
         str.setText(sub.toString());
         String out = Calculate.eq(str.getText().replace(',','.'));

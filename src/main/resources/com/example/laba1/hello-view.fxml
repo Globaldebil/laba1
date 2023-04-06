@@ -159,12 +159,12 @@
 
      </rowConstraints>
       <children>
-         <Button mnemonicParsing="false" prefHeight="31.0" prefWidth="64.0" style="-fx-background-color: #F3F3F3;" text="МС" />
-         <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="66.0" style="-fx-background-color: #F3F3F3;" text="MR" GridPane.columnIndex="1" />
-         <Button mnemonicParsing="false" prefHeight="34.0" prefWidth="66.0" style="-fx-background-color: #F3F3F3;" text="M+" GridPane.columnIndex="2" />
-         <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="82.0" style="-fx-background-color: #F3F3F3;" text="M-" GridPane.columnIndex="3" />
-         <Button mnemonicParsing="false" prefHeight="46.0" prefWidth="91.0" style="-fx-background-color: #F3F3F3;" text="MS" GridPane.columnIndex="4" />
-         <Button mnemonicParsing="false" prefHeight="79.0" prefWidth="94.0" style="-fx-background-color: #F3F3F3;" text="M" GridPane.columnIndex="5" />
+         <Button fx:id="memClear" mnemonicParsing="false" prefHeight="31.0" prefWidth="64.0" styleClass="but-memory" text="МС" GridPane.columnIndex="0" />
+         <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="66.0" styleClass="but-memory" text="MR" GridPane.columnIndex="1" />
+         <Button mnemonicParsing="false" prefHeight="34.0" prefWidth="66.0" styleClass="but-memory" text="M+" GridPane.columnIndex="2" />
+         <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="82.0" styleClass="but-memory" text="M-" GridPane.columnIndex="3" />
+         <Button mnemonicParsing="false" prefHeight="46.0" prefWidth="91.0" styleClass="but-memory" text="MS" GridPane.columnIndex="4" />
+         <Button mnemonicParsing="false" prefHeight="79.0" prefWidth="94.0" styleClass="but-memory" text="M" GridPane.columnIndex="5" />
       </children>
    </GridPane>
    <Label fx:id="str" alignment="TOP_RIGHT" layoutX="93.0" layoutY="56.0" prefHeight="27.0" prefWidth="234.0" textAlignment="RIGHT" textFill="#616161" AnchorPane.leftAnchor="4.0" AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="55.0">
