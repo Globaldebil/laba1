@@ -7,168 +7,181 @@
 <?import javafx.scene.text.*?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="502.0" prefWidth="330.0" styleClass="background" stylesheets="@button-calkul.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.laba1.HelloController">
-    <GridPane hgap="4.0" layoutY="186.0" prefHeight="293.0" prefWidth="322.0" vgap="2.0" AnchorPane.bottomAnchor="4.0" AnchorPane.leftAnchor="4.0" AnchorPane.rightAnchor="4.0">
-        <columnConstraints>
-            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-        </columnConstraints>
-        <rowConstraints>
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-        </rowConstraints>
-        <opaqueInsets>
-            <Insets />
-        </opaqueInsets>
-        <Button mnemonicParsing="false" onAction="#perClick" prefHeight="44.0" prefWidth="83.0" styleClass="button_param" stylesheets="@button-calkul.css" text="\%" GridPane.columnIndex="0" GridPane.rowIndex="0">
-         <font>
-            <Font size="20.0" />
-         </font></Button>
-        <Button mnemonicParsing="false" prefHeight="44.0" prefWidth="83.0" styleClass="button_param" stylesheets="@button-calkul.css" text="CE" GridPane.columnIndex="1" GridPane.rowIndex="0">
-            <font>
-                <Font size="20.0" />
-            </font>
-        </Button>
-        <Button mnemonicParsing="false" onAction="#delClick" prefHeight="44.0" prefWidth="83.0" stylesheets="@button-calkul.css" GridPane.columnIndex="3" GridPane.rowIndex="0">
-         <styleClass>
-            <String fx:value="button_param" />
-            <String fx:value="ddel" />
-         </styleClass></Button>
-        <Button mnemonicParsing="false" onAction="#clearClick" prefHeight="44.0" prefWidth="83.0" styleClass="button_param" stylesheets="@button-calkul.css" text="C" GridPane.columnIndex="2" GridPane.rowIndex="0">
-         <font>
-            <Font size="20.0" />
-         </font></Button>
-        <Button mnemonicParsing="false" onAction="#invClick" prefHeight="44.0" prefWidth="83.0" styleClass="button_param" stylesheets="@button-calkul.css" text="1/X" GridPane.columnIndex="0" GridPane.rowIndex="1" />
-        <Button mnemonicParsing="false" onAction="#powClick" prefHeight="44.0" prefWidth="83.0" stylesheets="@button-calkul.css" GridPane.columnIndex="1" GridPane.rowIndex="1">
-         <styleClass>
-            <String fx:value="button_param" />
-            <String fx:value="square" />
-         </styleClass></Button>
-        <Button mnemonicParsing="false" onAction="#sqrtClick" prefHeight="44.0" prefWidth="83.0" stylesheets="@button-calkul.css" GridPane.columnIndex="2" GridPane.rowIndex="1">
-         <styleClass>
-            <String fx:value="button_param" />
-            <String fx:value="sqrt" />
-         </styleClass></Button>
-        <Button mnemonicParsing="false" onAction="#divClick" prefHeight="44.0" prefWidth="83.0" stylesheets="@button-calkul.css" GridPane.columnIndex="3" GridPane.rowIndex="1">
-         <styleClass>
-            <String fx:value="button_param" />
-            <String fx:value="del" />
-         </styleClass></Button>
-        <Button mnemonicParsing="false" onAction="#sevenClick" prefHeight="44.0" prefWidth="83.0" style="-fx-border-color: #CACACA; -fx-background-color: #FFFFFF; -fx-border-radius: 5px;" styleClass="button_num" stylesheets="@button-calkul.css" text="7" GridPane.columnIndex="0" GridPane.rowIndex="2">
-            <font>
-                <Font size="20.0" />
-            </font>
-        </Button>
-        <Button mnemonicParsing="false" onAction="#eightClick" prefHeight="44.0" prefWidth="83.0" style="-fx-border-color: #CACACA; -fx-background-color: #FFFFFF; -fx-border-radius: 5px;" styleClass="button_num" stylesheets="@button-calkul.css" text="8" GridPane.columnIndex="1" GridPane.rowIndex="2">
-            <font>
-                <Font size="20.0" />
-            </font>
-        </Button>
-        <Button mnemonicParsing="false" onAction="#nineClick" prefHeight="44.0" prefWidth="83.0" style="-fx-border-color: #CACACA; -fx-background-color: #FFFFFF; -fx-border-radius: 5px;" styleClass="button_num" stylesheets="@button-calkul.css" text="9" GridPane.columnIndex="2" GridPane.rowIndex="2">
-            <font>
-                <Font size="20.0" />
-            </font>
-        </Button>
-        <Button mnemonicParsing="false" onAction="#proizClick" prefHeight="88.0" prefWidth="123.0" stylesheets="@button-calkul.css" GridPane.columnIndex="3" GridPane.rowIndex="2">
-         <styleClass>
-            <String fx:value="button_param" />
-            <String fx:value="proiz" />
-         </styleClass></Button>
+   <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="502.0" prefWidth="330.0" styleClass="background" stylesheets="@button-calkul.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+       <GridPane hgap="4.0" layoutY="186.0" prefHeight="293.0" prefWidth="322.0" vgap="2.0" AnchorPane.bottomAnchor="4.0" AnchorPane.leftAnchor="4.0" AnchorPane.rightAnchor="4.0">
+           <columnConstraints>
+               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+           </columnConstraints>
+           <rowConstraints>
+               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+           </rowConstraints>
+           <opaqueInsets>
+               <Insets />
+           </opaqueInsets>
+           <Button mnemonicParsing="false" onAction="#perClick" prefHeight="44.0" prefWidth="83.0" styleClass="button_param" stylesheets="@button-calkul.css" text="\%" GridPane.columnIndex="0" GridPane.rowIndex="0">
+               <font>
+                   <Font size="20.0" />
+               </font></Button>
+           <Button mnemonicParsing="false" prefHeight="44.0" prefWidth="83.0" styleClass="button_param" stylesheets="@button-calkul.css" text="CE" GridPane.columnIndex="1" GridPane.rowIndex="0">
+               <font>
+                   <Font size="20.0" />
+               </font>
+           </Button>
+           <Button mnemonicParsing="false" onAction="#delClick" prefHeight="44.0" prefWidth="83.0" stylesheets="@button-calkul.css" GridPane.columnIndex="3" GridPane.rowIndex="0">
+               <styleClass>
+                   <String fx:value="button_param" />
+                   <String fx:value="ddel" />
+               </styleClass></Button>
+           <Button mnemonicParsing="false" onAction="#clearClick" prefHeight="44.0" prefWidth="83.0" styleClass="button_param" stylesheets="@button-calkul.css" text="C" GridPane.columnIndex="2" GridPane.rowIndex="0">
+               <font>
+                   <Font size="20.0" />
+               </font></Button>
+           <Button mnemonicParsing="false" onAction="#invClick" prefHeight="44.0" prefWidth="83.0" styleClass="button_param" stylesheets="@button-calkul.css" text="1/X" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+           <Button mnemonicParsing="false" onAction="#powClick" prefHeight="44.0" prefWidth="83.0" stylesheets="@button-calkul.css" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <styleClass>
+                   <String fx:value="button_param" />
+                   <String fx:value="square" />
+               </styleClass></Button>
+           <Button mnemonicParsing="false" onAction="#sqrtClick" prefHeight="44.0" prefWidth="83.0" stylesheets="@button-calkul.css" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <styleClass>
+                   <String fx:value="button_param" />
+                   <String fx:value="sqrt" />
+               </styleClass></Button>
+           <Button mnemonicParsing="false" onAction="#divClick" prefHeight="44.0" prefWidth="83.0" stylesheets="@button-calkul.css" GridPane.columnIndex="3" GridPane.rowIndex="1">
+               <styleClass>
+                   <String fx:value="button_param" />
+                   <String fx:value="del" />
+               </styleClass></Button>
+           <Button mnemonicParsing="false" onAction="#sevenClick" prefHeight="44.0" prefWidth="83.0" style="-fx-border-color: #CACACA; -fx-background-color: #FFFFFF; -fx-border-radius: 5px;" styleClass="button_num" stylesheets="@button-calkul.css" text="7" GridPane.columnIndex="0" GridPane.rowIndex="2">
+               <font>
+                   <Font size="20.0" />
+               </font>
+           </Button>
+           <Button mnemonicParsing="false" onAction="#eightClick" prefHeight="44.0" prefWidth="83.0" style="-fx-border-color: #CACACA; -fx-background-color: #FFFFFF; -fx-border-radius: 5px;" styleClass="button_num" stylesheets="@button-calkul.css" text="8" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <font>
+                   <Font size="20.0" />
+               </font>
+           </Button>
+           <Button mnemonicParsing="false" onAction="#nineClick" prefHeight="44.0" prefWidth="83.0" style="-fx-border-color: #CACACA; -fx-background-color: #FFFFFF; -fx-border-radius: 5px;" styleClass="button_num" stylesheets="@button-calkul.css" text="9" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <font>
+                   <Font size="20.0" />
+               </font>
+           </Button>
+           <Button mnemonicParsing="false" onAction="#proizClick" prefHeight="88.0" prefWidth="123.0" stylesheets="@button-calkul.css" GridPane.columnIndex="3" GridPane.rowIndex="2">
+               <styleClass>
+                   <String fx:value="button_param" />
+                   <String fx:value="proiz" />
+               </styleClass></Button>
 
-        <Button mnemonicParsing="false" onAction="#fourClick" prefHeight="44.0" prefWidth="83.0" style="-fx-border-color: #CACACA; -fx-background-color: #FFFFFF; -fx-border-radius: 5px;" styleClass="button_num" stylesheets="@button-calkul.css" text="4" GridPane.columnIndex="0" GridPane.rowIndex="3">
-            <font>
-                <Font size="20.0" />
-            </font>
-        </Button>
-        <Button mnemonicParsing="false" onAction="#fiveClick" prefHeight="44.0" prefWidth="83.0" style="-fx-border-color: #CACACA; -fx-background-color: #FFFFFF; -fx-border-radius: 5px;" styleClass="button_num" stylesheets="@button-calkul.css" text="5" GridPane.columnIndex="1" GridPane.rowIndex="3">
-            <font>
-                <Font size="20.0" />
-            </font>
-        </Button>
-        <Button mnemonicParsing="false" onAction="#sixClick" prefHeight="44.0" prefWidth="83.0" style="-fx-border-color: #CACACA; -fx-background-color: #FFFFFF; -fx-border-radius: 5px;" styleClass="button_num" stylesheets="@button-calkul.css" text="6" GridPane.columnIndex="2" GridPane.rowIndex="3">
-            <font>
-                <Font size="20.0" />
-            </font>
-        </Button>
-        <Button mnemonicParsing="false" onAction="#minusClick" prefHeight="44.0" prefWidth="83.0" styleClass="button_param" stylesheets="@button-calkul.css" text="-" GridPane.columnIndex="3" GridPane.rowIndex="3">
-         <font>
-            <Font size="20.0" />
-         </font></Button>
-        <Button mnemonicParsing="false" onAction="#oneClick" prefHeight="44.0" prefWidth="83.0" styleClass="button_num" stylesheets="@button-calkul.css" text="1" GridPane.columnIndex="0" GridPane.rowIndex="4">
-            <font>
-                <Font size="20.0" />
-            </font>
-        </Button>
-        <Button mnemonicParsing="false" onAction="#twoClick" prefHeight="44.0" prefWidth="83.0" style="-fx-border-color: #CACACA; -fx-background-color: #FFFFFF; -fx-border-radius: 5px;" styleClass="button_num" stylesheets="@button-calkul.css" text="2" GridPane.columnIndex="1" GridPane.rowIndex="4">
-            <font>
-                <Font size="20.0" />
-            </font>
-        </Button>
-        <Button mnemonicParsing="false" onAction="#threeClick" prefHeight="44.0" prefWidth="83.0" style="-fx-border-color: #CACACA; -fx-background-color: #FFFFFF; -fx-border-radius: 5px;" styleClass="button_num" stylesheets="@button-calkul.css" text="3" GridPane.columnIndex="2" GridPane.rowIndex="4">
-            <font>
-                <Font size="20.0" />
-            </font>
-        </Button>
-        <Button mnemonicParsing="false" onAction="#plusClick" prefHeight="44.0" prefWidth="83.0" styleClass="button_param" stylesheets="@button-calkul.css" text="+" GridPane.columnIndex="3" GridPane.rowIndex="4">
-            <font>
-                <Font size="20.0" />
-            </font>
-        </Button>
-        <Button mnemonicParsing="false" onAction="#signClick" prefHeight="44.0" prefWidth="83.0" style="-fx-border-color: #CACACA; -fx-background-color: #FFFFFF; -fx-border-radius: 5px;" stylesheets="@button-calkul.css" GridPane.columnIndex="0" GridPane.rowIndex="5">
-         <styleClass>
-            <String fx:value="button_num" />
-            <String fx:value="plus-munus" />
-         </styleClass></Button>
-        <Button mnemonicParsing="false" onAction="#zeroClick" prefHeight="44.0" prefWidth="83.0" style="-fx-border-color: #CACACA; -fx-background-color: #FFFFFF; -fx-border-radius: 5px;" styleClass="button_num" stylesheets="@button-calkul.css" text="0" GridPane.columnIndex="1" GridPane.rowIndex="5">
-            <font>
-                <Font size="20.0" />
-            </font>
-        </Button>
-        <Button mnemonicParsing="false" onAction="#dotClick" prefHeight="44.0" prefWidth="83.0" style="-fx-border-color: #CACACA; -fx-background-color: #FFFFFF; -fx-border-radius: 5px;" styleClass="button_num" stylesheets="@button-calkul.css" text="," GridPane.columnIndex="2" GridPane.rowIndex="5">
-            <font>
-                <Font size="20.0" />
-            </font>
-        </Button>
-        <Button mnemonicParsing="false" onAction="#eq_click" prefHeight="44.0" prefWidth="83.0" styleClass="button_equal" stylesheets="@button-calkul.css" text="=" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="5">
-            <font>
-                <Font size="20.0" />
-            </font>
-        </Button>
-    </GridPane>
-    <Label fx:id="num" alignment="TOP_RIGHT" layoutX="4.0" layoutY="90.0" prefHeight="70.0" prefWidth="323.0" text="0" textAlignment="RIGHT" AnchorPane.bottomAnchor="342.0" AnchorPane.leftAnchor="4.0" AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="90.0">
-        <font>
-          <Font name="Segoe UI Semibold" size="48.0" />
-        </font>
-    </Label>
-   <GridPane layoutX="147.0" layoutY="170.0" prefHeight="27.0" prefWidth="405.0" AnchorPane.bottomAnchor="305.0" AnchorPane.leftAnchor="4.0" AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="170.0">
-     <columnConstraints>
-       <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-       <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-     </columnConstraints>
-     <rowConstraints>
-       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+           <Button mnemonicParsing="false" onAction="#fourClick" prefHeight="44.0" prefWidth="83.0" style="-fx-border-color: #CACACA; -fx-background-color: #FFFFFF; -fx-border-radius: 5px;" styleClass="button_num" stylesheets="@button-calkul.css" text="4" GridPane.columnIndex="0" GridPane.rowIndex="3">
+               <font>
+                   <Font size="20.0" />
+               </font>
+           </Button>
+           <Button mnemonicParsing="false" onAction="#fiveClick" prefHeight="44.0" prefWidth="83.0" style="-fx-border-color: #CACACA; -fx-background-color: #FFFFFF; -fx-border-radius: 5px;" styleClass="button_num" stylesheets="@button-calkul.css" text="5" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <font>
+                   <Font size="20.0" />
+               </font>
+           </Button>
+           <Button mnemonicParsing="false" onAction="#sixClick" prefHeight="44.0" prefWidth="83.0" style="-fx-border-color: #CACACA; -fx-background-color: #FFFFFF; -fx-border-radius: 5px;" styleClass="button_num" stylesheets="@button-calkul.css" text="6" GridPane.columnIndex="2" GridPane.rowIndex="3">
+               <font>
+                   <Font size="20.0" />
+               </font>
+           </Button>
+           <Button mnemonicParsing="false" onAction="#minusClick" prefHeight="44.0" prefWidth="83.0" styleClass="button_param" stylesheets="@button-calkul.css" text="-" GridPane.columnIndex="3" GridPane.rowIndex="3">
+               <font>
+                   <Font size="20.0" />
+               </font></Button>
+           <Button mnemonicParsing="false" onAction="#oneClick" prefHeight="44.0" prefWidth="83.0" styleClass="button_num" stylesheets="@button-calkul.css" text="1" GridPane.columnIndex="0" GridPane.rowIndex="4">
+               <font>
+                   <Font size="20.0" />
+               </font>
+           </Button>
+           <Button mnemonicParsing="false" onAction="#twoClick" prefHeight="44.0" prefWidth="83.0" style="-fx-border-color: #CACACA; -fx-background-color: #FFFFFF; -fx-border-radius: 5px;" styleClass="button_num" stylesheets="@button-calkul.css" text="2" GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <font>
+                   <Font size="20.0" />
+               </font>
+           </Button>
+           <Button mnemonicParsing="false" onAction="#threeClick" prefHeight="44.0" prefWidth="83.0" style="-fx-border-color: #CACACA; -fx-background-color: #FFFFFF; -fx-border-radius: 5px;" styleClass="button_num" stylesheets="@button-calkul.css" text="3" GridPane.columnIndex="2" GridPane.rowIndex="4">
+               <font>
+                   <Font size="20.0" />
+               </font>
+           </Button>
+           <Button mnemonicParsing="false" onAction="#plusClick" prefHeight="44.0" prefWidth="83.0" styleClass="button_param" stylesheets="@button-calkul.css" text="+" GridPane.columnIndex="3" GridPane.rowIndex="4">
+               <font>
+                   <Font size="20.0" />
+               </font>
+           </Button>
+           <Button mnemonicParsing="false" onAction="#signClick" prefHeight="44.0" prefWidth="83.0" style="-fx-border-color: #CACACA; -fx-background-color: #FFFFFF; -fx-border-radius: 5px;" stylesheets="@button-calkul.css" GridPane.columnIndex="0" GridPane.rowIndex="5">
+               <styleClass>
+                   <String fx:value="button_num" />
+                   <String fx:value="plus-munus" />
+               </styleClass></Button>
+           <Button mnemonicParsing="false" onAction="#zeroClick" prefHeight="44.0" prefWidth="83.0" style="-fx-border-color: #CACACA; -fx-background-color: #FFFFFF; -fx-border-radius: 5px;" styleClass="button_num" stylesheets="@button-calkul.css" text="0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+               <font>
+                   <Font size="20.0" />
+               </font>
+           </Button>
+           <Button mnemonicParsing="false" onAction="#dotClick" prefHeight="44.0" prefWidth="83.0" style="-fx-border-color: #CACACA; -fx-background-color: #FFFFFF; -fx-border-radius: 5px;" styleClass="button_num" stylesheets="@button-calkul.css" text="," GridPane.columnIndex="2" GridPane.rowIndex="5">
+               <font>
+                   <Font size="20.0" />
+               </font>
+           </Button>
+           <Button mnemonicParsing="false" onAction="#eq_click" prefHeight="44.0" prefWidth="83.0" styleClass="button_equal" stylesheets="@button-calkul.css" text="=" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="5">
+               <font>
+                   <Font size="20.0" />
+               </font>
+           </Button>
+       </GridPane>
+       <Label fx:id="num" alignment="TOP_RIGHT" layoutX="4.0" layoutY="90.0" prefHeight="70.0" prefWidth="323.0" text="0" textAlignment="RIGHT" AnchorPane.bottomAnchor="342.0" AnchorPane.leftAnchor="4.0" AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="90.0">
+           <font>
+               <Font name="Segoe UI Semibold" size="48.0" />
+           </font>
+       </Label>
+       <GridPane layoutX="147.0" layoutY="170.0" prefHeight="27.0" prefWidth="405.0" AnchorPane.bottomAnchor="305.0"
+                 AnchorPane.leftAnchor="4.0" AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="170.0">
+           <columnConstraints>
+               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+           </columnConstraints>
+           <rowConstraints>
+               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
 
-     </rowConstraints>
-      <children>
-         <Button fx:id="memClear" mnemonicParsing="false" prefHeight="31.0" prefWidth="64.0" styleClass="but-memory" text="МС" GridPane.columnIndex="0" />
-         <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="66.0" styleClass="but-memory" text="MR" GridPane.columnIndex="1" />
-         <Button mnemonicParsing="false" prefHeight="34.0" prefWidth="66.0" styleClass="but-memory" text="M+" GridPane.columnIndex="2" />
-         <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="82.0" styleClass="but-memory" text="M-" GridPane.columnIndex="3" />
-         <Button mnemonicParsing="false" prefHeight="46.0" prefWidth="91.0" styleClass="but-memory" text="MS" GridPane.columnIndex="4" />
-         <Button mnemonicParsing="false" prefHeight="79.0" prefWidth="94.0" styleClass="but-memory" text="M" GridPane.columnIndex="5" />
-      </children>
-   </GridPane>
-   <Label fx:id="str" alignment="TOP_RIGHT" layoutX="93.0" layoutY="56.0" prefHeight="27.0" prefWidth="234.0" textAlignment="RIGHT" textFill="#616161" AnchorPane.leftAnchor="4.0" AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="55.0">
-      <font>
-         <Font size="17.0" />
-      </font></Label>
+           </rowConstraints>
+           <Button fx:id="memClear" mnemonicParsing="false" onAction="#memoryClear" prefHeight="31.0" prefWidth="64.0"
+                   styleClass="but-memory" text="МС" GridPane.columnIndex="0" disable="true"/>
+           <Button fx:id="memRead" mnemonicParsing="false" onAction="#memoryRead" prefHeight="30.0" prefWidth="66.0"
+                   styleClass="but-memory" text="MR" GridPane.columnIndex="1" disable="true"/>
+           <Button fx:id="memPlus" mnemonicParsing="false" onAction="#memoryPlus" prefHeight="34.0" prefWidth="66.0"
+                   styleClass="but-memory" text="M+" GridPane.columnIndex="2"/>
+           <Button fx:id="memMinus" mnemonicParsing="false" onAction="#memoryMinus" prefHeight="40.0" prefWidth="82.0"
+                   styleClass="but-memory" text="M-" GridPane.columnIndex="3"/>
+           <Button fx:id="memSave" mnemonicParsing="false" onAction="#memorySave" prefHeight="46.0" prefWidth="91.0"
+                   styleClass="but-memory" text="MS" GridPane.columnIndex="4"/>
+           <Button fx:id="memCheck" mnemonicParsing="false" onAction="#memoryCheck" prefHeight="79.0" prefWidth="94.0"
+                   styleClass="but-memory" text="M" GridPane.columnIndex="5" disable="true"/>
+       </GridPane>
+       <Label fx:id="str" alignment="TOP_RIGHT" layoutX="93.0" layoutY="56.0" prefHeight="27.0" prefWidth="234.0" textAlignment="RIGHT" textFill="#616161" AnchorPane.leftAnchor="4.0" AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="55.0">
+           <font>
+               <Font size="17.0" />
+           </font></Label>
+       <Button layoutX="269.0" layoutY="11.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="47.0" stylesheets="@button-calkul.css" AnchorPane.bottomAnchor="447.0" AnchorPane.leftAnchor="269.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="11.0">
+           <styleClass>
+               <String fx:value="but-memory" />
+               <String fx:value="history" />
+           </styleClass>
+       </Button>
+   </AnchorPane>
 </AnchorPane>

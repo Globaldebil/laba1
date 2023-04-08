@@ -4,11 +4,12 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 
-import java.io.FileNotFoundException;
 
 public class HelloController {
     StringBuilder main = new StringBuilder();
     StringBuilder sub = new StringBuilder();
+
+    static Memory memory = new Memory();
     private void equalClicked()
     {
         sub.setLength(0);
@@ -16,16 +17,28 @@ public class HelloController {
         main.setLength(0);
         eq = false;
     }
-    boolean eq = false;
-
+    private boolean eq = false;
+    private boolean dou = false;
     @FXML
-    public Button memClear;
+    Button memClear,memCheck, memSave, memPlus, memMinus, memRead;
     @FXML
     private Label str, num;
+     public void makeDisable(){
+        if(memory.isEmpty()){
+            memClear.setDisable(memory.isEmpty());
+            memRead.setDisable(memory.isEmpty());
+            memCheck.setDisable(memory.isEmpty());
+        }
+        else {
+            memClear.setDisable(!memory.isEmpty());
+            memRead.setDisable(!memory.isEmpty());
+            memCheck.setDisable(!memory.isEmpty());
+        }
+    }
 
     //--------Равно------------
     @FXML
-    public void eq_click() throws FileNotFoundException {
+    public void eq_click() {
         sub.append(num.getText());
         str.setText(sub.toString());
         String out = Calculate.eq(str.getText().replace(',','.'));
@@ -163,11 +176,14 @@ public class HelloController {
     //--------Напечатать запятую------------
     @FXML
     public void dotClick(){
-        if(main.length()!=0)
-            main.append(",");
-        else
-            main.append("0,");
-        num.setText(main.toString());
+        if (!dou){
+            if(main.length()!=0)
+                main.append(",");
+            else
+                main.append("0,");
+            num.setText(main.toString());
+            dou = true;
+        }
     }
 
     //--------Напечатать плюс------------
@@ -178,6 +194,7 @@ public class HelloController {
         sub.append(" + ");
         main.setLength(0);
         str.setText(sub.toString());
+        dou = false;
     }
 
     //--------Напечатать минус------------
@@ -188,6 +205,7 @@ public class HelloController {
         sub.append(" - ");
         main.setLength(0);
         str.setText(sub.toString());
+        dou = false;
     }
 
     //--------Напечатать умножение------------
@@ -198,6 +216,7 @@ public class HelloController {
         sub.append(" x ");
         main.setLength(0);
         str.setText(sub.toString());
+        dou = false;
     }
 
     //--------Напечатать деление------------
@@ -208,11 +227,14 @@ public class HelloController {
         sub.append(" / ");
         main.setLength(0);
         str.setText(sub.toString());
+        dou = false;
     }
 
-    //--------Напечатать отчистить------------
+    //--------отчистить------------
     @FXML
     public void clearClick(){
+        dou = false;
+        eq = false;
         sub.setLength(0);
         main.setLength(0);
         str.setText("");
@@ -267,6 +289,7 @@ public class HelloController {
         }
         if(main.length()>1)
         {
+            if(main.charAt(main.length()-1)==',') dou = false;
             main.delete(main.length()-1,main.length());
             num.setText(main.toString());
         }
@@ -275,5 +298,41 @@ public class HelloController {
             main.setLength(0);
             num.setText("0");
         }
+    }
+    @FXML
+    public void memoryClear(){
+        memory.delete();
+        makeDisable();
+    }
+
+    @FXML
+    public void memorySave(){
+        memory.setMemory(num.getText().replace(',','.'));
+        makeDisable();
+    }
+    @FXML
+    public void memoryRead(){
+        String mem = memory.getMemory();
+        num.setText(mem);
+        main.append(mem);
+    }
+    @FXML
+    public void memoryPlus(){
+        memory.setMemory(String.valueOf(
+                Double.parseDouble(memory.getMemory().replace(',','.'))+Double.parseDouble(num.getText())
+        ));
+        makeDisable();
+    }
+    @FXML
+    public void memoryMinus(){
+        memory.setMemory(String.valueOf(
+                Double.parseDouble(num.getText().replace(',','.')) - Double.parseDouble(memory.getMemory())
+        ));
+        makeDisable();
+    }
+
+    @FXML
+    public void memoryCheck(){
+
     }
 }

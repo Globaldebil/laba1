@@ -6,16 +6,16 @@ public class Calculate {
         String out = str;
         if (str.length() < 3) out = "0";
         else {
-            int a, b;
-            a = Integer.parseInt(s[0]);
-            b = Integer.parseInt(s[2]);
+            double a, b;
+            a = Double.parseDouble(s[0]);
+            b = Double.parseDouble(s[2]);
             char par = s[1].charAt(0);
             switch (par) {
-                case '+' -> out = String.format(String.valueOf(a + b));
-                case '-' -> out = String.valueOf(a - b);
-                case 'x' -> out = String.valueOf(a * b);
+                case '+' -> out = (a+b%1==0) ? String.format(String.valueOf(Integer.valueOf((int) (a + b)))): String.format(String.valueOf(a + b)).replace('.', ',');
+                case '-' -> out = (a-b%1==0) ? String.format(String.valueOf(Integer.valueOf((int) (a - b)))): String.valueOf(a - b).replace('.', ',');
+                case 'x' -> out = (a*b%1==0) ? String.format(String.valueOf(Integer.valueOf((int) (a * b)))): String.valueOf(a * b).replace('.', ',');
                 case '/' -> {
-                    if (b != 0) out = String.valueOf((double) a / b).replace('.', ',');
+                    if (b != 0) out = (a/b%1==0) ? String.valueOf( (int)(a / b)): String.valueOf( a / b).replace('.', ',');
                     else out = "Деление на ноль невозможно";
                 }
             }

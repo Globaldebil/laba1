@@ -91,3 +91,6 @@
     -fx-background-color: #EDEDED;
     -fx-text-fill: #ADADAD;;
 }
+.history{
+    -fx-graphic: url("../images/history.png");
+}

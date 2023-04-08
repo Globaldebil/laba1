@@ -4,25 +4,25 @@ import javafx.scene.control.Label;
 
 public class param {
     public static void sqr(Label num){
-        int n = Integer.parseInt(num.getText());
+        double n = Double.parseDouble(num.getText());
         if(n>=0)
             num.setText(String.valueOf(Math.sqrt(n)).replace('.',','));
         else
             num.setText("Неверный ввод");
     }
     public static void power(Label num){
-        int n = Integer.parseInt(num.getText());
+        double n = Double.parseDouble(num.getText());
         num.setText(String.valueOf((int)Math.pow(n,2)));
     }
     public static void inverse(Label num){
-        int n = Integer.parseInt(num.getText());
+        double n = Double.parseDouble(num.getText());
         if(n!=0)
-            num.setText(String.valueOf(Double.valueOf(1/(double)n)).replace('.',','));
+            num.setText(String.valueOf(Double.valueOf(1/n)).replace('.',','));
         else
             num.setText("Деление на ноль невозможно");
     }
     public static void pers(Label num, Label mainn){
-        int n;
+        double n;
         if (mainn.getText().equals(""))
         {
             n = 0;
@@ -30,9 +30,9 @@ public class param {
         else
         {
             String[] a = mainn.getText().split(" ");
-            n = Integer.parseInt(a[0]);
+            n = Double.parseDouble(a[0]);
         }
-        double out = (double) n / 100 * Integer.parseInt(num.getText());
+        double out = n / 100 * Double.parseDouble(num.getText());
         num.setText(String.valueOf(out).replace('.',','));
     }
 }
