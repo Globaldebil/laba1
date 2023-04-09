@@ -12,8 +12,10 @@ public class param {
             else
                 num.setText(String.valueOf(Math.sqrt(n)).replace('.',','));
         }
-        else
+        else{
+            num.setFont(Font.font("Segoe UI Semibold",20));
             num.setText("Неверный ввод");
+        }
     }
     public static void power(Label num){
         double n = Double.parseDouble(num.getText());
