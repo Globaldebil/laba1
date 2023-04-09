@@ -1,11 +1,24 @@
 package com.example.laba1;
 
+import javafx.animation.FadeTransition;
+import javafx.animation.TranslateTransition;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.ListView;
+import javafx.scene.control.SelectionMode;
+import javafx.scene.layout.AnchorPane;
+import javafx.util.Duration;
+
+import java.net.URL;
+import java.util.List;
+import java.util.ResourceBundle;
 
 
-public class HelloController {
+public class HelloController implements Initializable {
     StringBuilder main = new StringBuilder();
     StringBuilder sub = new StringBuilder();
 
@@ -17,23 +30,72 @@ public class HelloController {
         main.setLength(0);
         eq = false;
     }
+    @FXML
+    Button historyBut;
     private boolean eq = false;
     private boolean dou = false;
     @FXML
-    Button memClear,memCheck, memSave, memPlus, memMinus, memRead;
+    private ListView<String> hs;
+    private final List<String> history = FXCollections.observableArrayList();
+
+    private final List<String> mem = FXCollections.observableArrayList();
+    @FXML
+    AnchorPane blackPane, historyPane;
+    @FXML
+    Button memClear, memSave, memPlus, memMinus, memRead, memCheck;
     @FXML
     private Label str, num;
      public void makeDisable(){
-        if(memory.isEmpty()){
-            memClear.setDisable(memory.isEmpty());
-            memRead.setDisable(memory.isEmpty());
-            memCheck.setDisable(memory.isEmpty());
-        }
-        else {
-            memClear.setDisable(!memory.isEmpty());
-            memRead.setDisable(!memory.isEmpty());
-            memCheck.setDisable(!memory.isEmpty());
-        }
+         memClear.setDisable(memory.isEmpty());
+         memRead.setDisable(memory.isEmpty());
+         memCheck.setDisable(memory.isEmpty());
+    }
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+
+        blackPane.setVisible(false);
+
+        FadeTransition fadeTransition=new FadeTransition(Duration.seconds(0.1),blackPane);
+        fadeTransition.setFromValue(1);
+        fadeTransition.setToValue(0);
+        fadeTransition.play();
+
+        TranslateTransition translateTransition=new TranslateTransition(Duration.seconds(0.1),historyPane);
+        translateTransition.setByY(+300);
+        translateTransition.play();
+
+        historyBut.setOnMouseClicked(event -> {
+            if(history.size()==0) history.add("Журнала ещё нет");
+            hs.setItems((ObservableList<String>) history);
+            hs.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
+            blackPane.setVisible(true);
+
+            FadeTransition fadeTransition1=new FadeTransition(Duration.seconds(0.1),blackPane);
+            fadeTransition1.setFromValue(0);
+            fadeTransition1.setToValue(0.15);
+            fadeTransition1.play();
+
+            TranslateTransition translateTransition1=new TranslateTransition(Duration.seconds(0.1),historyPane);
+            translateTransition1.setByY(-300);
+            translateTransition1.play();
+        });
+
+        blackPane.setOnMouseClicked(event -> {
+
+
+
+            FadeTransition fadeTransition1=new FadeTransition(Duration.seconds(0.1),blackPane);
+            fadeTransition1.setFromValue(0.15);
+            fadeTransition1.setToValue(0);
+            fadeTransition1.play();
+
+            fadeTransition1.setOnFinished(event1 -> blackPane.setVisible(false));
+
+
+            TranslateTransition translateTransition1=new TranslateTransition(Duration.seconds(0.1),historyPane);
+            translateTransition1.setByY(+300);
+            translateTransition1.play();
+        });
     }
 
     //--------Равно------------
@@ -48,6 +110,8 @@ public class HelloController {
         main.append(out);
         str.setText(sub.toString());
         eq = true;
+        if(history.size()!=0&&history.get(0).equals("Журнала ещё нет")) history.remove(0);
+        history.add(str.getText() + " " + num.getText());
     }
 
     //--------Смена знака------------
@@ -304,7 +368,6 @@ public class HelloController {
         memory.delete();
         makeDisable();
     }
-
     @FXML
     public void memorySave(){
         memory.setMemory(num.getText().replace(',','.'));
@@ -322,6 +385,7 @@ public class HelloController {
                 Double.parseDouble(memory.getMemory().replace(',','.'))+Double.parseDouble(num.getText())
         ));
         makeDisable();
+
     }
     @FXML
     public void memoryMinus(){
@@ -330,9 +394,19 @@ public class HelloController {
         ));
         makeDisable();
     }
-
-    @FXML
     public void memoryCheck(){
+        blackPane.setVisible(true);
 
+        FadeTransition fadeTransition1=new FadeTransition(Duration.seconds(0.1),blackPane);
+        fadeTransition1.setFromValue(0);
+        fadeTransition1.setToValue(0.15);
+        fadeTransition1.play();
+
+        TranslateTransition translateTransition1=new TranslateTransition(Duration.seconds(0.1),historyPane);
+        translateTransition1.setByY(-300);
+        translateTransition1.play();
+        if(mem.size()!=0) mem.remove(0);
+        mem.add(memory.getMemory());
+        hs.setItems((ObservableList<String>) mem);
     }
 }

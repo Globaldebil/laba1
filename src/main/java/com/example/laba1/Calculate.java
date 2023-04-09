@@ -11,9 +11,7 @@ public class Calculate {
             b = Double.parseDouble(s[2]);
             char par = s[1].charAt(0);
             switch (par) {
-                case '+' -> out = ((a+b)%1==0.0) ?
-                        String.format(String.valueOf(Integer.valueOf((int) (a + b)))):
-                    String.format(String.valueOf(a + b)).replace('.', ',');
+                case '+' -> out = ((a+b)%1==0.0) ? String.format(String.valueOf(Integer.valueOf((int) (a + b)))): String.format(String.valueOf(a + b)).replace('.', ',');
                 case '-' -> out = ((a-b)%1==0) ? String.format(String.valueOf(Integer.valueOf((int) (a - b)))): String.valueOf(a - b).replace('.', ',');
                 case 'x' -> out = ((a*b)%1==0) ? String.format(String.valueOf(Integer.valueOf((int) (a * b)))): String.valueOf(a * b).replace('.', ',');
                 case '/' -> {
