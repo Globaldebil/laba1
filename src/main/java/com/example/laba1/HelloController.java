@@ -38,7 +38,7 @@ public class HelloController implements Initializable {
     }
     @FXML
     Button historyBut; //Кропка просмотра истории
-    private boolean eq = false; //Логическая переменная для определения нажата ли кнопка "Равно"
+    private boolean eq = false, par = false; //Логическая переменная для определения нажата ли кнопка "Равно"
     private boolean dou = false;//Логичечкая переменная для определения целое ли число введено или нет
     @FXML
     private ListView<String> hs;//ListView для показа истории и памяти
@@ -107,18 +107,26 @@ public class HelloController implements Initializable {
     //--------Равно------------
     @FXML
     public void eq_click() {
-        sub.append(num.getText());
-        str.setText(sub.toString());
-        String out = Calculate.eq(str.getText().replace(',','.'));
-        if(out.equals("Деление на ноль невозможно")) num.setFont(Font.font("Segoe UI Semibold",20));
-        sub.append(" =");
-        num.setText(out);
-        main.setLength(0);
-        main.append(out);
-        str.setText(sub.toString());
-        eq = true;
-        if(history.size()!=0&&history.get(0).equals("Журнала ещё нет")) history.remove(0);
-        history.add(str.getText() + " " + num.getText());
+         if(par){
+            sub.append(num.getText());
+            str.setText(sub.toString());
+            String out = Calculate.eq(str.getText().replace(',','.'));
+            if(out.equals("Деление на ноль невозможно")) num.setFont(Font.font("Segoe UI Semibold",20));
+            sub.append(" =");
+            num.setText(out);
+            main.setLength(0);
+            main.append(out);
+            str.setText(sub.toString());
+            eq = true;
+            if(history.size()!=0&&history.get(0).equals("Журнала ещё нет")) history.remove(0);
+            history.add(str.getText() + " " + num.getText());
+            par = false;
+         }
+         else {
+             sub.append(num.getText()).append(" =");
+             str.setText(sub.toString());
+             eq = true;
+         }
     }
 
     //--------Смена знака------------
@@ -266,6 +274,7 @@ public class HelloController implements Initializable {
         main.setLength(0);
         str.setText(sub.toString());
         dou = false;
+        par = true;
     }
 
     //--------Напечатать минус------------
@@ -277,6 +286,7 @@ public class HelloController implements Initializable {
         main.setLength(0);
         str.setText(sub.toString());
         dou = false;
+        par = true;
     }
 
     //--------Напечатать умножение------------
@@ -288,6 +298,7 @@ public class HelloController implements Initializable {
         main.setLength(0);
         str.setText(sub.toString());
         dou = false;
+        par = true;
     }
 
     //--------Напечатать деление------------
@@ -299,6 +310,7 @@ public class HelloController implements Initializable {
         main.setLength(0);
         str.setText(sub.toString());
         dou = false;
+        par = true;
     }
 
     //--------отчистить------------
@@ -311,6 +323,7 @@ public class HelloController implements Initializable {
         str.setText("");
         num.setText("0");
         num.setFont(Font.font("Segoe UI Semibold",48));
+        par = false;
     }
 
     //--------Вычислить корень числа------------
