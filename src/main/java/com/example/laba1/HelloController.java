@@ -379,11 +379,11 @@ public class HelloController implements Initializable {
         num.setText(mem);
         main.append(mem);
     }
+
     @FXML
     public void memoryPlus(){
-        memory.setMemory(String.valueOf(
-                Double.parseDouble(memory.getMemory().replace(',','.'))+Double.parseDouble(num.getText())
-        ));
+        memory.setMemory(String.valueOf(Double.parseDouble(memory.getMemory().replace(',','.'))+Double.parseDouble(num.getText())));
+        if(Double.parseDouble(memory.getMemory())%1==0) memory.setMemory(String.valueOf((int)Double.parseDouble(memory.getMemory())));
         makeDisable();
 
     }
@@ -392,6 +392,7 @@ public class HelloController implements Initializable {
         memory.setMemory(String.valueOf(
                 Double.parseDouble(num.getText().replace(',','.')) - Double.parseDouble(memory.getMemory())
         ));
+        if(Double.parseDouble(memory.getMemory())%1==0) memory.setMemory(String.valueOf((int)Double.parseDouble(memory.getMemory())));
         makeDisable();
     }
     public void memoryCheck(){
