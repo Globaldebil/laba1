@@ -2,8 +2,10 @@ package com.example.laba1;
 
 import javafx.scene.control.Label;
 import javafx.scene.text.Font;
-
-public class param {
+//Класс параметров
+public class param
+{
+    //Параметр нахождения квадратного корня
     public static void sqr(Label num){
         double n = Double.parseDouble(num.getText());
         if(n>=0){
@@ -17,6 +19,7 @@ public class param {
             num.setText("Неверный ввод");
         }
     }
+    //Параметр нахождения квадрата числа
     public static void power(Label num){
         double n = Double.parseDouble(num.getText());
 
@@ -25,6 +28,7 @@ public class param {
         else
             num.setText(String.valueOf(Math.pow(n,2)).replace('.',','));
     }
+    //Параметр нахождения обратного числа
     public static void inverse(Label num){
         double n = Double.parseDouble(num.getText());
         if(n!=0)
@@ -35,6 +39,7 @@ public class param {
             num.setFont(Font.font("Segoe UI Semibold",20));
         }
     }
+    //Параметр нахождения процента
     public static void pers(Label num, Label mainn){
         double n;
         if (mainn.getText().equals(""))

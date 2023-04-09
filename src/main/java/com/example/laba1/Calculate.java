@@ -1,6 +1,7 @@
 package com.example.laba1;
 
 public class Calculate {
+    //Вычисление
     public static String eq(String str) {
         String[] s = str.split(" ");
         String out = str;

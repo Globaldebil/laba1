@@ -20,9 +20,14 @@ import java.util.ResourceBundle;
 
 
 public class HelloController implements Initializable {
+
+    //Основная строка
     StringBuilder main = new StringBuilder();
+
+    //Подстрока
     StringBuilder sub = new StringBuilder();
 
+    //Объект класса для памяти
     static Memory memory = new Memory();
     private void equalClicked()
     {
@@ -32,27 +37,27 @@ public class HelloController implements Initializable {
         eq = false;
     }
     @FXML
-    Button historyBut;
-    private boolean eq = false;
-    private boolean dou = false;
+    Button historyBut; //Кропка просмотра истории
+    private boolean eq = false; //Логическая переменная для определения нажата ли кнопка "Равно"
+    private boolean dou = false;//Логичечкая переменная для определения целое ли число введено или нет
     @FXML
-    private ListView<String> hs;
-    private final List<String> history = FXCollections.observableArrayList();
+    private ListView<String> hs;//ListView для показа истории и памяти
+    private final List<String> history = FXCollections.observableArrayList();//История
 
-    private final List<String> mem = FXCollections.observableArrayList();
+    private final List<String> mem = FXCollections.observableArrayList(); //Память
     @FXML
-    AnchorPane blackPane, historyPane;
+    AnchorPane blackPane, historyPane; //Панель для затемнения и для вывода пямяти/истории
     @FXML
-    Button memClear, memSave, memPlus, memMinus, memRead, memCheck;
+    Button memClear, memSave, memPlus, memMinus, memRead, memCheck;//Кнопки памяти
     @FXML
-    private Label str, num;
-     public void makeDisable(){
+    private Label str, num;//Текстовый вывод строки и цифры
+     public void makeDisable(){ //Метод включения/выключения кнопок памяти
          memClear.setDisable(memory.isEmpty());
          memRead.setDisable(memory.isEmpty());
          memCheck.setDisable(memory.isEmpty());
     }
     @Override
-    public void initialize(URL location, ResourceBundle resources) {
+    public void initialize(URL location, ResourceBundle resources) { //Метод, вызываемый при запуске программы
 
         blackPane.setVisible(false);
 
@@ -65,7 +70,7 @@ public class HelloController implements Initializable {
         translateTransition.setByY(+300);
         translateTransition.play();
 
-        historyBut.setOnMouseClicked(event -> {
+        historyBut.setOnMouseClicked(event -> { //Вызов панели истории
             if(history.size()==0) history.add("Журнала ещё нет");
             hs.setItems((ObservableList<String>) history);
             hs.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
@@ -81,7 +86,7 @@ public class HelloController implements Initializable {
             translateTransition1.play();
         });
 
-        blackPane.setOnMouseClicked(event -> {
+        blackPane.setOnMouseClicked(event -> { //Закрытие панели истории
 
 
 
@@ -367,38 +372,38 @@ public class HelloController implements Initializable {
         }
     }
     @FXML
-    public void memoryClear(){
+    public void memoryClear(){ //Отчистка памяти
         memory.delete();
         makeDisable();
     }
     @FXML
-    public void memorySave(){
+    public void memorySave(){ //Сохранение памяти
         memory.setMemory(num.getText().replace(',','.'));
         makeDisable();
     }
     @FXML
-    public void memoryRead(){
+    public void memoryRead(){ //Чтение из памяти
         String mem = memory.getMemory();
         num.setText(mem);
         main.append(mem);
     }
 
     @FXML
-    public void memoryPlus(){
+    public void memoryPlus(){//Прибавить к числу из памяти введённое число
         memory.setMemory(String.valueOf(Double.parseDouble(memory.getMemory().replace(',','.'))+Double.parseDouble(num.getText())));
         if(Double.parseDouble(memory.getMemory())%1==0) memory.setMemory(String.valueOf((int)Double.parseDouble(memory.getMemory())));
         makeDisable();
 
     }
     @FXML
-    public void memoryMinus(){
+    public void memoryMinus(){//Отнять из числа из памяти введённое число
         memory.setMemory(String.valueOf(
                 Double.parseDouble(num.getText().replace(',','.')) - Double.parseDouble(memory.getMemory())
         ));
         if(Double.parseDouble(memory.getMemory())%1==0) memory.setMemory(String.valueOf((int)Double.parseDouble(memory.getMemory())));
         makeDisable();
     }
-    public void memoryCheck(){
+    public void memoryCheck(){//Проверка памяти
         blackPane.setVisible(true);
 
         FadeTransition fadeTransition1=new FadeTransition(Duration.seconds(0.1),blackPane);
