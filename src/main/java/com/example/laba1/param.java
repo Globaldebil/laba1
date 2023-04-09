@@ -7,7 +7,7 @@ public class param
 {
     //Параметр нахождения квадратного корня
     public static void sqr(Label num){
-        double n = Double.parseDouble(num.getText());
+        double n = Double.parseDouble(num.getText().replace(',','.'));
         if(n>=0){
             if (Math.sqrt(n)%1==0)
                 num.setText(String.valueOf((long)Math.sqrt(n)));
@@ -21,7 +21,7 @@ public class param
     }
     //Параметр нахождения квадрата числа
     public static void power(Label num){
-        double n = Double.parseDouble(num.getText());
+        double n = Double.parseDouble(num.getText().replace(',','.'));
 
         if (n%1==0)
             num.setText(String.valueOf((long)Math.pow(n,2)));
@@ -30,7 +30,7 @@ public class param
     }
     //Параметр нахождения обратного числа
     public static void inverse(Label num){
-        double n = Double.parseDouble(num.getText());
+        double n = Double.parseDouble(num.getText().replace(',','.'));
         if(n!=0)
             if ((1/n)%1!=0) { num.setText(String.valueOf(1/n).replace('.',',')); }
             else { num.setText(String.valueOf((long)(1/n))); }
@@ -49,7 +49,7 @@ public class param
         else
         {
             String[] a = mainn.getText().split(" ");
-            n = Double.parseDouble(a[0]);
+            n = Double.parseDouble(a[0].replace(',','.'));
         }
         double out = n / 100 * Double.parseDouble(num.getText());
         if(out%1==0)  num.setText(String.valueOf((long)out).replace('.',','));
