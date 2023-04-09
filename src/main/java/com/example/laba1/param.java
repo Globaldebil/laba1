@@ -19,6 +19,7 @@ public class param {
     }
     public static void power(Label num){
         double n = Double.parseDouble(num.getText());
+
         if (n%1==0)
             num.setText(String.valueOf((long)Math.pow(n,2)));
         else
