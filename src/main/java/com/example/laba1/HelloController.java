@@ -126,6 +126,7 @@ public class HelloController implements Initializable {
              sub.append(num.getText()).append(" =");
              str.setText(sub.toString());
              eq = true;
+
          }
     }
 
