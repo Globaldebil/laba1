@@ -11,6 +11,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.control.SelectionMode;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.text.Font;
 import javafx.util.Duration;
 
 import java.net.URL;
@@ -104,6 +105,7 @@ public class HelloController implements Initializable {
         sub.append(num.getText());
         str.setText(sub.toString());
         String out = Calculate.eq(str.getText().replace(',','.'));
+        if(out.equals("Деление на ноль невозможно")) num.setFont(Font.font("Segoe UI Semibold",20));
         sub.append(" =");
         num.setText(out);
         main.setLength(0);
@@ -303,6 +305,7 @@ public class HelloController implements Initializable {
         main.setLength(0);
         str.setText("");
         num.setText("0");
+        num.setFont(Font.font("Segoe UI Semibold",48));
     }
 
     //--------Вычислить корень числа------------
