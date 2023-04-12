@@ -13,7 +13,6 @@ import javafx.scene.control.SelectionMode;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Font;
 import javafx.util.Duration;
-
 import java.net.URL;
 import java.util.List;
 import java.util.ResourceBundle;
@@ -36,9 +35,22 @@ public class HelloController implements Initializable {
         main.setLength(0);
         eq = false;
     }
+
+    private void fontsize(){
+        String out = num.getText();
+        if(out.length()>12) {
+            font = font - 4*(out.length()-12);
+            num.setFont(Font.font("Segoe UI Semibold",font));
+        }
+        else {
+            font = 48;
+            num.setFont(Font.font("Segoe UI Semibold",font));
+        }
+    }
     @FXML
     Button historyBut; //Кропка просмотра истории
     private boolean eq = false, par = false; //Логическая переменная для определения нажата ли кнопка "Равно"
+    int font = 48;
     private boolean dou = false;//Логичечкая переменная для определения целое ли число введено или нет
     @FXML
     private ListView<String> hs;//ListView для показа истории и памяти
@@ -111,9 +123,10 @@ public class HelloController implements Initializable {
             sub.append(num.getText());
             str.setText(sub.toString());
             String out = Calculate.eq(str.getText().replace(',','.'));
-            if(out.equals("Деление на ноль невозможно")) num.setFont(Font.font("Segoe UI Semibold",20));
             sub.append(" =");
             num.setText(out);
+             if(out.equals("Деление на ноль невозможно")) num.setFont(Font.font("Segoe UI Semibold",20));
+             else fontsize();
             main.setLength(0);
             main.append(out);
             str.setText(sub.toString());
@@ -126,7 +139,6 @@ public class HelloController implements Initializable {
              sub.append(num.getText()).append(" =");
              str.setText(sub.toString());
              eq = true;
-
          }
     }
 
@@ -140,6 +152,7 @@ public class HelloController implements Initializable {
         main.setLength(0);
         main.append(n);
         num.setText(main.toString());
+        fontsize();
     }
 
     //--------Напечатать 1------------
@@ -151,6 +164,7 @@ public class HelloController implements Initializable {
         }
         main.append("1");
         num.setText(main.toString());
+        fontsize();
     }
 
 
@@ -163,6 +177,7 @@ public class HelloController implements Initializable {
         }
         main.append("2");
         num.setText(main.toString());
+        fontsize();
     }
 
     //--------Напечатать 3------------
@@ -174,6 +189,7 @@ public class HelloController implements Initializable {
         }
         main.append("3");
         num.setText(main.toString());
+        fontsize();
     }
 
     //--------Напечатать 4------------
@@ -185,6 +201,7 @@ public class HelloController implements Initializable {
         }
         main.append("4");
         num.setText(main.toString());
+        fontsize();
     }
 
     //--------Напечатать 5------------
@@ -196,6 +213,7 @@ public class HelloController implements Initializable {
         }
         main.append("5");
         num.setText(main.toString());
+        fontsize();
     }
 
     //--------Напечатать 6------------
@@ -207,6 +225,7 @@ public class HelloController implements Initializable {
         }
         main.append("6");
         num.setText(main.toString());
+        fontsize();
     }
 
     //--------Напечатать 7------------
@@ -218,6 +237,7 @@ public class HelloController implements Initializable {
         }
         main.append("7");
         num.setText(main.toString());
+        fontsize();
     }
 
     //--------Напечатать 8------------
@@ -229,6 +249,7 @@ public class HelloController implements Initializable {
         }
         main.append("8");
         num.setText(main.toString());
+        fontsize();
     }
 
     //--------Напечатать 9------------
@@ -240,6 +261,7 @@ public class HelloController implements Initializable {
         }
         main.append("9");
         num.setText(main.toString());
+        fontsize();
     }
 
     //--------Напечатать 0------------
@@ -251,6 +273,7 @@ public class HelloController implements Initializable {
         }
         main.append("0");
         num.setText(main.toString());
+        fontsize();
     }
 
     //--------Напечатать запятую------------
@@ -264,6 +287,7 @@ public class HelloController implements Initializable {
             num.setText(main.toString());
             dou = true;
         }
+        fontsize();
     }
 
     //--------Напечатать плюс------------
@@ -325,6 +349,7 @@ public class HelloController implements Initializable {
         num.setText("0");
         num.setFont(Font.font("Segoe UI Semibold",48));
         par = false;
+        fontsize();
     }
 
     //--------Вычислить корень числа------------
@@ -384,6 +409,7 @@ public class HelloController implements Initializable {
             main.setLength(0);
             num.setText("0");
         }
+        fontsize();
     }
     @FXML
     public void memoryClear(){ //Отчистка памяти
