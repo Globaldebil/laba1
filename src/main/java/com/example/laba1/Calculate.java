@@ -17,6 +17,7 @@ public class Calculate {
                 case 'x' -> out = ((a*b)%1==0) ? String.format(String.valueOf(Long.valueOf((long) (a * b)))): String.valueOf(a * b).replace('.', ',');
                 case '/' -> {
                     if (b != 0) out = ((a/b)%1==0) ? String.valueOf( (long)(a / b)): String.valueOf( a / b).replace('.', ',');
+                    else if (a == 0)out = "Результат не определён";
                     else out = "Деление на ноль невозможно";
                 }
             }

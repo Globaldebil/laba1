@@ -39,7 +39,7 @@ public class HelloController implements Initializable {
     private void fontsize(){
         String out = num.getText();
         if(out.length()>12) {
-            font = font - 4*(out.length()-12);
+            font = 48 - 4*(out.length()-12);
             num.setFont(Font.font("Segoe UI Semibold",font));
         }
         else {
@@ -125,7 +125,7 @@ public class HelloController implements Initializable {
             String out = Calculate.eq(str.getText().replace(',','.'));
             sub.append(" =");
             num.setText(out);
-             if(out.equals("Деление на ноль невозможно")) num.setFont(Font.font("Segoe UI Semibold",20));
+             if(out.equals("Деление на ноль невозможно")||out.equals("Результат не определён")) num.setFont(Font.font("Segoe UI Semibold",20));
              else fontsize();
             main.setLength(0);
             main.append(out);
